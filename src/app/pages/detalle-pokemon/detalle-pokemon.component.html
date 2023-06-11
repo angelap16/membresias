@@ -1,0 +1,15 @@
+<div class="modal-background" *ngIf="mostrar">
+    <div class="modal-container">
+      <div class="modal-content">
+        <span class="close" (click)="ocultar()">&times;</span>
+        <div>
+            <ul>
+                <li>{{mensaje}}</li>
+                <h2>{{detalles}}</h2>
+            </ul>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  

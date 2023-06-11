@@ -1,0 +1,35 @@
+<form [formGroup]="form" (submit)="this.enviar()">
+    <div class="form">
+        <div>
+            <h3>Formulario</h3>
+            <div class="form__input">
+                <label>Nombre</label>
+                <input type="text" placeholder="Ingrese su nombre" formControlName="nombre">
+            </div>
+            <div class="form__input">
+                <label>Apellido</label>
+                <input type="text" placeholder="Ingrese su apellido" formControlName="Apellido">
+            </div>
+            <div class="form__input">
+                <label>Correo</label>
+                <input type="email" placeholder="correo@email.com" formControlName="correo">
+                <div *ngIf="form.get('correo')?.invalid && form.get('correo')?.touched">
+                    <p>Es necesario introducir un email valido</p>
+                </div><br>
+            </div>
+            <div class="form__input">
+                <label>Fecha de afiliación</label>
+                <input type="date" placeholder="Ingrese su fecha de afiliación" formControlName="fechAfiliacion">
+            </div>
+            <div class="form__input">
+                <label>Telefono</label>
+                <input type="number" placeholder="Ingrese su número de telefono" formControlName="Telefono">
+            </div>
+            <div class="form__input">
+                <label>Sexo</label>
+                <input type="text" formControlName="sexo">
+            </div>
+            <button type="submit" [disabled]="form.invalid">Enviar</button>
+        </div> 
+    </div>
+</form>

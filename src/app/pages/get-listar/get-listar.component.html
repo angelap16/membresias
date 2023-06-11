@@ -1,0 +1,12 @@
+
+    <app-detalle-pokemon [mostrar]="mostrarModal" >hola</app-detalle-pokemon>
+
+<div class="container-lista">
+    <h1>Lista</h1>
+<input id="search" placeholder="Search..." [(ngModel)]="searchText" (keyup)="filtro()">
+<ul *ngFor="let data of lista; let i=index">
+    <li><strong>Nombre: </strong>{{data.name}}</li>
+    <i class="fa-regular fa-trash-can" (click)="deletePokemon(data.name)"></i>
+    <i class="fa-solid fa-circle-info"  (click)="mostrarAlerta(data.url)"></i>
+</ul>
+</div>

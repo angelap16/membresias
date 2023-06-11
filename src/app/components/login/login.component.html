@@ -1,0 +1,21 @@
+<div class="login-container">
+    <h1>Iniciar Sesión</h1>
+<form [formGroup]="formGroup" (submit)="iniciarSesion()">
+    <div>
+        <label>Usuario</label>
+        <input type="text" formControlName="usuario">
+    </div>
+    <div>
+        <label>Contraseña</label>
+        <input [type]="tipo ? 'password': 'text'" formControlName="contraseña">
+        <i [ngClass]="tipo ? 'fa-sharp fa-solid fa-eye-slash':'fa-sharp fa-solid fa-eye'"(click)="tipo=!tipo"></i>
+    </div>
+    <div *ngIf="usuarioInvalido">
+        <p>Usuario Invalido</p>
+    </div>
+    <div>
+        <button [disabled]="formGroup.invalid" type="submit" >Aceptar</button>
+    </div>
+</form>
+</div>
+   

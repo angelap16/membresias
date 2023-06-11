@@ -1,0 +1,22 @@
+<table>
+    <thead>
+       <th>Nombre</th>
+       <th>Apellido</th>
+       <th>correo</th>
+       <th>Fecha de afiliación </th>
+       <th>Estado</th>
+       <th>Telefono</th>
+       <th>Sexo</th>
+    </thead>
+     <tbody>
+        <tr *ngFor="let datos of listData">
+            <td>{{datos.nombre}}</td>
+            <td>{{datos.apellido}}</td>
+            <td>{{datos.correo}}</td>
+            <td>{{datos.fechAfiliacion}}</td>
+             <td>{{estado}}</td>
+            <td>{{datos.telefono}}</td>
+            <td>{{datos.sexo}}</td>
+        </tr>
+    </tbody> 
+</table>
